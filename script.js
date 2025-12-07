@@ -18,8 +18,10 @@ form.addEventListener("submit",searchForLocation);
 let target="Mumbai";
 
 
-const fetchResults = async (targetLocation) =>{
-  let url = `https://api.weatherapi.com/v1/current.json?key=0e49c92a2ae546d9934135009250612&q=${targetLocation}&aqi=no`;
+const fetchResults = async (targetLocation) =>{  
+  let url = `https://api.weatherapi.com/v1/current.json?key=0e49c92a2ae546d9934135009250612&q=${encodeURIComponent(targetLocation)}&aqi=no`;
+ 
+  
 
   const res=await fetch(url);
 
