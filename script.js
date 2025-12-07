@@ -19,7 +19,7 @@ let target="Mumbai";
 
 
 const fetchResults = async (targetLocation) =>{
-  let url = `http://api.weatherapi.com/v1/current.json?key=0e49c92a2ae546d9934135009250612&q=${targetLocation}&aqi=no`;
+  let url = `https://api.weatherapi.com/v1/current.json?key=0e49c92a2ae546d9934135009250612&q=${targetLocation}&aqi=no`;
 
   const res=await fetch(url);
 
@@ -45,7 +45,7 @@ function updateWeatherDetails(locationName, time, temp, condition){
   locationField.innerText = locationName;
   dataField.innerText = time;
   conditionField.innerText = condition;
-  
+
 }
 
 
